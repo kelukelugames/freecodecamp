@@ -1,4 +1,15 @@
-html{
-  //background: url("http://i.imgur.com/fMAyj7d.jpg") no-repeat;
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css");
+
+body {
+  background: url("http://i.imgur.com/fMAyj7d.jpg") no-repeat;
   background-size: cover;
+}
+
+.weather {
+	font-size: 20px;
+	background-color: gray;
+	width: 200px;
+ 	margin:0 auto;
+	margin-top: 100px;
+ 	float:none;
 }
