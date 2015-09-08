@@ -9,20 +9,31 @@ body {
 	background-color: white;
 	width: 300px;
 	border: 1px solid #ffc72c;
-	float: none;
 	margin: 0 auto;
 	margin-top: 50px;
 }
 
 .main ul {
 	background-color: #ffc72c;
+ 	margin-top: 0;
+  	padding-left: 0;
 }
 
 .main li {
-	position: relative;
-	display: inline-block;
+  display: inline-block;
+  font-family: Arial;
+  color: white;
+  padding: 10px 30px 10px 30px;
+  border-right: 1px solid white;
 }
 
 li:hover {
 	cursor: pointer;
+}
+
+.main li:first-child {
+  padding-right: 36px;
+}
+.main li:last-child {
+  border-right: none;
 }
