@@ -25,6 +25,7 @@ body {
   color: white;
   padding: 10px 30px 10px 30px;
   border-right: 1px solid white;
+  position: relative;
 }
 
 li:hover {
@@ -37,3 +38,21 @@ li:hover {
 .main li:last-child {
   border-right: none;
 }
+
+
+
+
+.main .active:after{
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #ffc72c;
+  border-width: 10px;
+  margin-left: -10px;
+}
+
