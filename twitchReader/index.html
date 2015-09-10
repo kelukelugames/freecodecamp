@@ -11,17 +11,23 @@
   <title>Twitch Status</title>
 </head>
 
-<body>
-    <div class="main" ng-app="TwitchReader">
-      <ul class="menu" ng-controller="SelectionController">
-        <li class="active">All</li>
-        <li>Online</li>
-        <li>Offline</li>
+<body ng-app="TwitchReader">
+    <div class="main"ng-controller="SelectionController">
+      <ul class="menu" >
+        <li data-display="allStreamers" class="active">All</li>
+        <li data-display="onlineStreamers">Online</li>
+        <li data-display="offStreamers">Offline</li>
       </ul>
-      <div class="search">
-        <i class="fa fa-search"></i>
-      </div>
-      <ul class="streamers">
+      
+    <ul>
+      <a href="http://twitch.tv/{{user.username}}"  target="_blank" ng-repeat="user in profile">
+        <li>
+          <img ng-src="{{user.logo}}" class="pic"/>
+          <span class="name">{{user.name}}</span>
+          <span class="status"><i class="{{user.status}}"></i></span>
+          <span class="title">{{user.streamTitle}}</span></li>
+        </a>
+    </ul>
       </ul>
     </div>
 </body>
