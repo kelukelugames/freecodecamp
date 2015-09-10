@@ -14,15 +14,18 @@ body {
 }
 
 .main ul {
-	background-color: #ffc72c;
- 	margin-top: 0;
-  	padding-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.menu {
+  background-color: #ffc72c;
 }
 
 .main li {
   display: inline-block;
   font-family: Arial;
-  color: white;
+  color: black;
   padding: 10px 30px 10px 30px;
   border-right: 1px solid white;
   position: relative;
@@ -51,4 +54,46 @@ li:hover {
   border-top-color: #ffc72c;
   border-width: 10px;
   margin-left: -10px;
+}
+
+.streamers li .pic {
+  height: 60px;
+  width: 60px;
+}
+
+.streamers a {
+  text-decoration: none;
+}
+
+.streamers li {
+  list-style-type: none;
+  display: block;
+  padding-left: 10px;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.name, .status, .title {
+  position: absolute;
+  line-height: 50px;
+}
+
+.name, .title {
+  left: 80px;
+}
+.streamers li .status {
+  right: 20px;
+}
+.streamers li .title {
+  color: gray;
+  font-size: .8em;
+  margin-top: 20px;
+}
+
+.off {
+  color: #e04e39;
+}
+
+.on {
+  color: #abad23;
 }

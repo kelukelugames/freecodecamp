@@ -20,17 +20,17 @@ app.controller('SelectionController', function ($scope) {
 			var isStreaming = data.stream === null ? false : true;
 
 			if (isStreaming) {
-				obj.status = 'fa fa-check';
+				obj.status = 'fa fa-check on';
 				var streamTitle = data.stream.channel.status;
 				
 				if (streamTitle.length > 36) {
 					streamTitle = streamTitle.substring(0, 33);
 					streamTitle += '...';
 				}
-				obj.streamTitle = streamTitle;
+				obj.title = streamTitle;
 			} else {
-				obj.status = 'fa fa-exclamation';
-				data.streamTitle = '';
+				obj.status = 'fa fa-exclamation off';
+				data.title = '';
 			}
 
 			obj.username = streamer;
