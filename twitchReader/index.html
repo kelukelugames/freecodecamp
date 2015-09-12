@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script src="scripts.js"></script>
+
+  <title>Twitch Status</title>
+</head>
+
+<body ng-app="TwitchReader">
+  <div class="main"ng-controller="SelectionController">
+    <ul class="menu" >
+      <li data-display="allStreamers" class="active">All</li>
+      <li data-display="onlineStreamers">Online</li>
+      <li data-display="offStreamers">Offline</li>
+    </ul>
+    <ul class="streamers">
+      <a href="http://twitch.tv/{{user.username}}"  target="_blank" ng-repeat="user in profile">
+        <li>
+          <img ng-src="{{user.logo}}" class="pic"/>
+          <span class="name">{{user.name}}</span>
+          <span class="status"><i class="{{user.status}}"></i></span>
+          <span class="title">{{user.title}}</span></li>
+        </a>
+      </ul>
+    </ul>
+  </div>
+</body>
+</html>
+
