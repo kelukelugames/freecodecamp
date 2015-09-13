@@ -15,9 +15,8 @@ body {
     fill: blue;
 }
 
-.hour,
-.minute,
-.sec,
-.handCircle {
+#hour,
+#minute,
+#handCircle {
     fill: yellow;
 }
