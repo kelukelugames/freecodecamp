@@ -1,2 +1,23 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css");
 @import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+
+body {
+  background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png");
+}
+
+.clock {
+    max-height: 75vh;
+    cursor: pointer;
+}
+
+
+.face {
+    fill: blue;
+}
+
+.hour,
+.minute,
+.sec,
+.handCircle {
+    fill: yellow;
+}
