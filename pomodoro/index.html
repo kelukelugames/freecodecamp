@@ -12,8 +12,8 @@
   <div class="container-fluid">
 
         <svg class="clock" viewBox="0 0 100 100">
-          <filter id="dropshadow" height="130%">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+          <filter id="clockshadow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
             <feOffset dx="2" dy="2" result="offsetblur"/>
             <feMerge> 
               <feMergeNode/>
@@ -21,14 +21,22 @@
             </feMerge>
           </filter>
 
-          <circle class="face"  cx="50" cy="50" r="40" style="filter:url(#dropshadow)"/>
+          <filter id="handshadow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="0.2"/>
+            <feOffset dx="2" dy="2" result="offsetblur"/>
+            <feMerge> 
+              <feMergeNode/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+          <circle class="face"  cx="50" cy="50" r="40" style="filter:url(#clockshadow)"/>
 
-          <g class="hands">
-            <polygon id="hour" points="50,25 53,50 47,50" />
-            <polygon id="minute" points="50,10 53,50 47,50" />
+          <g id="hands" style="filter:url(#handshadow)">
+            <polygon id="hour" points="50,25 52,50 48,50"/>
+            <polygon id="minute" points="50,10 52,50 48,50"/>
+            <circle id="handCircle" cx="50" cy="50" r="2.5" />
           </g>
 
-          <circle class="handCircle" cx="50" cy="50" r="3" />
         </svg>
       </div>
 </body>
