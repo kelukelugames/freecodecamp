@@ -3,16 +3,16 @@
 
 body {
   background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/congruent_pentagon.png");
+  cursor: initial;
 }
 
 .clock {
     max-height: 75vh;
-    cursor: pointer;
 }
-
 
 .face {
     fill: blue;
+    cursor: pointer;
 }
 
 #hour,
